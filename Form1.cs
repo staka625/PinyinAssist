@@ -64,7 +64,11 @@ namespace WindowsFormsApp1
         }
 
         private void copyButton_Click(object sender, EventArgs e) {
-            Clipboard.SetText(textBoxoutput.Text);
+            string s = textBoxoutput.Text;
+            if (s == "") {
+                return;
+            }
+            Clipboard.SetText(s);
         }
     }
 }
