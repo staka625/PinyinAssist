@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void textBoxinput_TextChanged(object sender, EventArgs e)
+        private void TextBoxinput_TextChanged(object sender, EventArgs e)
         {
             string s = textBoxinput.Text;
 
@@ -61,6 +61,10 @@ namespace WindowsFormsApp1
             s = s.Replace("v4", "ǜ");
 
             textBoxoutput.Text = s;
+        }
+
+        private void copyButton_Click(object sender, EventArgs e) {
+            Clipboard.SetText(textBoxoutput.Text);
         }
     }
 }
